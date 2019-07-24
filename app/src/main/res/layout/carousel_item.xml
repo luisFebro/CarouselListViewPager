@@ -6,6 +6,9 @@
     android:layout_height="300dp"
     android:orientation="vertical"
     android:layout_gravity="center"
+    android:background="@drawable/item_selector"
+    android:clickable="true"
+    android:focusable="true"
     >
 
     <TextView
