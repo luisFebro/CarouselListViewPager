@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+
 public class CarouselAdapter extends RecyclerView.Adapter<CarouselAdapter.ViewHolder> {
 
     private Context mContext;

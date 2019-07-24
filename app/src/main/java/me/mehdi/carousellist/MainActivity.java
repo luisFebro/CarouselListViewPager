@@ -6,6 +6,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 import com.leochuan.CarouselLayoutManager;
+import com.leochuan.CircleLayoutManager;
+import com.leochuan.GalleryLayoutManager;
+import com.leochuan.ViewPagerLayoutManager;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,6 +21,12 @@ public class MainActivity extends AppCompatActivity {
 
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setAdapter(new CarouselAdapter(this));
-        mRecyclerView.setLayoutManager(new CarouselLayoutManager(this, 1));
+        CircleLayoutManager circleLayoutManager = new CircleLayoutManager(this, CircleLayoutManager.BOTTOM, true);
+        GalleryLayoutManager galleryLayoutManager = new GalleryLayoutManager(this, 1);
+        galleryLayoutManager.setFlipRotate(true);
+        circleLayoutManager.setInfinite(true);
+        mRecyclerView.setLayoutManager(galleryLayoutManager);
+
+
     }
 }
