@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         GalleryLayoutManager galleryLayoutManager = new GalleryLayoutManager(this, 1);
         galleryLayoutManager.setFlipRotate(true);
         circleLayoutManager.setInfinite(true);
-        mRecyclerView.setLayoutManager(galleryLayoutManager);
+        mRecyclerView.setLayoutManager(circleLayoutManager);
 
 
     }

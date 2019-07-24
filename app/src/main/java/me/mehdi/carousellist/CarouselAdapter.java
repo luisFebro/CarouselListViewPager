@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 
 public class CarouselAdapter extends RecyclerView.Adapter<CarouselAdapter.ViewHolder> {
 
@@ -39,7 +41,7 @@ public class CarouselAdapter extends RecyclerView.Adapter<CarouselAdapter.ViewHo
 
     class ViewHolder extends RecyclerView.ViewHolder{
         TextView title;
-        ImageView image;
+        CircleImageView image;
 
 
         public ViewHolder(@NonNull View itemView) {
