@@ -1,6 +1,7 @@
 package me.mehdi.carousellist;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -21,12 +22,17 @@ public class MainActivity extends AppCompatActivity {
 
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setAdapter(new CarouselAdapter(this));
-        CircleLayoutManager circleLayoutManager = new CircleLayoutManager(this, CircleLayoutManager.BOTTOM, true);
-        GalleryLayoutManager galleryLayoutManager = new GalleryLayoutManager(this, 1);
-        galleryLayoutManager.setFlipRotate(true);
-        circleLayoutManager.setInfinite(true);
-        mRecyclerView.setLayoutManager(circleLayoutManager);
+//        CircleLayoutManager circleLayoutManager = new CircleLayoutManager(this, CircleLayoutManager.BOTTOM, true);
+        GalleryLayoutManager galleryLayoutManager = new GalleryLayoutManager(this, -200, LinearLayoutManager.HORIZONTAL, false);
+//        galleryLayoutManager.setMoveSpeed(1000);
+        galleryLayoutManager.setMinAlpha(0.500F);
+        galleryLayoutManager.setMaxAlpha(1.000F);
+        galleryLayoutManager.setAngle(30.000F);
+        galleryLayoutManager.setEnableBringCenterToFront(true);
 
+        galleryLayoutManager.setFlipRotate(true);
+        galleryLayoutManager.setInfinite(true);
+        mRecyclerView.setLayoutManager(galleryLayoutManager);
 
     }
 }

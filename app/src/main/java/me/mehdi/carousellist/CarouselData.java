@@ -2,18 +2,18 @@ package me.mehdi.carousellist;
 
 public class CarouselData {
     public static int Images[] = {
-            R.drawable.apple,
-            R.drawable.banana,
-            R.drawable.pineapple,
-            R.drawable.kiwi,
-            R.drawable.cherry
+            R.drawable.epica,
+            R.drawable.rammstein,
+            R.drawable.slipknot,
+            R.drawable.avenged,
+            R.drawable.metallica
     };
 
     public static String Titles[] = {
-            "Apple",
-            "Banana",
-            "Pineapple",
-            "Kiwi",
-            "Cherry"
+            "Epica",
+            "Rammstein",
+            "Slipknot",
+            "Avenged Sevenfold",
+            "Metallica"
     };
 }
